@@ -2,7 +2,7 @@
     <label for="">NIK</label>
     <input type="text" name="nik" id="nik" class="form-control" required>
  </div>
-<div class="form-group">
+<div class="form-group" id="unit">
     <label for="">Nama</label>
     <input type="text" name="nama" id="nama" class="form-control" required>
 </div>

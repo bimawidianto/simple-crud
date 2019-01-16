@@ -89,8 +89,8 @@
 
       modal.find('.modal-body #nik').val(nik);
       modal.find('.modal-body #nama').val(nama);
-      modal.find('.modal-body #unit').val(unit);
-      modal.find('.modal-body #status').val(status);
     })
+
+    $("div.unit select").val("val2");
     </script>
 @endpush
