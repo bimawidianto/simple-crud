@@ -14,5 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/pegawai', 'PegawaiController');
+Route::resource('/pegawai', 'PegawaiController')->except([
+    'create', 'show', 'edit'
+]);
 Route::get('/result', 'PegawaiController@status')->name('pegawai.status');
