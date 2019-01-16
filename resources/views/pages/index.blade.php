@@ -54,8 +54,8 @@
                         <td>
                             <button class="btn btn-default" data-mynik="{{ $row->nik }}" 
                                 data-mynama="{{ $row->nama }}" 
-                                data-myunit={{ $row->unit->nama }}
-                                data-mystatus={{ $row->status->nama }} 
+                                data-myunit={{ $row->unit_id }}
+                                data-mystatus={{ $row->status_id }} 
                                 data-toggle="modal" data-target="#edit">Edit</button> |
                             <form action="{{ route('pegawai.destroy', $row->nik) }}" method="POST">
                                 {{ csrf_field() }}
@@ -87,10 +87,10 @@
       var mystatus = button.data('mystatus') 
       var modal = $(this)
 
-      modal.find('.modal-body #nik').val(nik);
-      modal.find('.modal-body #nama').val(nama);
-      modal.find('.modal-body #unit select').val(myunit);
-      modal.find('.modal-body #status select').val(mystatus);
+      modal.find('#nik').val(nik);
+      modal.find('#nama').val(nama);
+      modal.find('#unit').val(myunit);
+      modal.find('#status').val(mystatus);
     })
     </script>
 @endpush
