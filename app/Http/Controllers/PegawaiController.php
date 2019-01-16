@@ -28,12 +28,7 @@ class PegawaiController extends Controller
         $pegawai = Pegawai::where('status_id', $statuses)->get();
 
         return view('pages.index', compact('pegawai', 'status', 'unit'));
-    }
-
-    public function create()
-    {
-        //
-    }
+    }    
 
     public function store(Request $request)
     {
@@ -52,16 +47,6 @@ class PegawaiController extends Controller
         ]);
 
         return redirect()->route('pegawai.index');
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
     }
 
     public function update(Request $request)
@@ -89,5 +74,20 @@ class PegawaiController extends Controller
         $pegawai = Pegawai::findOrFail($id)->delete();
 
         return redirect()->route('pegawai.index');
+    }
+
+    public function create()
+    {
+        //
+    }
+
+    public function show($id)
+    {
+        //
+    }
+
+    public function edit($id)
+    {
+        //
     }
 }
